@@ -1,0 +1,20 @@
+{
+  "name": "vishaal-skills",
+  "interface": {
+    "displayName": "Vishaal's Skills"
+  },
+  "plugins": [
+    {
+      "name": "vishaal",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vishaal"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

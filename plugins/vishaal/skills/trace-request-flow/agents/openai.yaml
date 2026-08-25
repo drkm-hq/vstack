@@ -1,0 +1,4 @@
+interface:
+  display_name: "Request Flow Trace"
+  short_description: "Trace one request through code and infrastructure"
+  default_prompt: "Use $trace-request-flow to trace this request through the codebase and show its exact payloads and Mermaid sequence diagram."

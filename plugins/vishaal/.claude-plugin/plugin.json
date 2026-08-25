@@ -1,0 +1,12 @@
+{
+  "name": "vishaal",
+  "version": "1.0.0",
+  "description": "Vishaal's portable engineering and code-review skills for Claude Code and Codex.",
+  "author": {
+    "name": "Vishaal Yalamanchali",
+    "url": "https://github.com/vishytheswishy"
+  },
+  "homepage": "https://github.com/vishytheswishy/skills",
+  "repository": "https://github.com/vishytheswishy/skills",
+  "keywords": ["engineering", "git", "review", "testing", "skills"]
+}

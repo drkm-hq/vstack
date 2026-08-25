@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yeet"
+  short_description: "Run lint/tests and commit with Vishaal sign-off"
+  default_prompt: "Use $yeet to run format, lint, relevant tests, and then create a meaningful signed-off commit."

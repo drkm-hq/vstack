@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "vishaal-skills",
+  "description": "Vishaal's portable engineering skills for Claude Code and Codex.",
+  "owner": {
+    "name": "Vishaal Yalamanchali"
+  },
+  "plugins": [
+    {
+      "name": "vishaal",
+      "description": "Eleven focused skills for review, testing, debugging, and shipping code.",
+      "source": "./plugins/vishaal",
+      "category": "development"
+    }
+  ]
+}
