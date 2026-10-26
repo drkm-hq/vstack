@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adversarial Review"
+  short_description: "Review committed changes in an isolated clone"
+  default_prompt: "Use $adversarial-review to review this branch with the configured Claude CLI."

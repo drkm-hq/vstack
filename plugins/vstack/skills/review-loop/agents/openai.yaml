@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Loop"
+  short_description: "Iterate with an independent code reviewer"
+  default_prompt: "Use $review-loop to review this change with my configured reviewer and resolve supported findings."

@@ -1,0 +1,18 @@
+{
+  "name": "vstack",
+  "version": "2.0.0",
+  "description": "Vishaal's engineering stack: personal workflows with adapted pstack and tstack skills.",
+  "author": {
+    "name": "Vishaal Yalamanchali",
+    "url": "https://github.com/vishytheswishy"
+  },
+  "homepage": "https://github.com/drkm-hq/vstack",
+  "repository": "https://github.com/drkm-hq/vstack",
+  "keywords": [
+    "engineering",
+    "git",
+    "review",
+    "testing",
+    "skills"
+  ]
+}

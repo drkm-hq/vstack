@@ -1,4 +1,0 @@
-interface:
-  display_name: "Deslop Code"
-  short_description: "Remove AI-generated code slop from branch diffs."
-  default_prompt: "Check the diff against main and remove AI-generated code slop."

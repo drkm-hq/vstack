@@ -1,0 +1,37 @@
+{
+  "name": "vstack",
+  "version": "2.0.0",
+  "description": "Vishaal's engineering stack: personal workflows with adapted pstack and tstack skills.",
+  "author": {
+    "name": "Vishaal Yalamanchali",
+    "url": "https://github.com/vishytheswishy"
+  },
+  "homepage": "https://github.com/drkm-hq/vstack",
+  "repository": "https://github.com/drkm-hq/vstack",
+  "keywords": [
+    "engineering",
+    "git",
+    "review",
+    "testing",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "vstack",
+    "shortDescription": "Portable engineering workflows and review tools.",
+    "longDescription": "Forty focused skills for design, investigation, implementation, verification, independent review, and shipping.",
+    "developerName": "Vishaal Yalamanchali",
+    "category": "Productivity",
+    "capabilities": [
+      "Engineering",
+      "Code Review",
+      "Automation"
+    ],
+    "websiteURL": "https://github.com/drkm-hq/vstack",
+    "defaultPrompt": [
+      "Review my current branch adversarially.",
+      "Trace this request through the codebase.",
+      "Verify and ship the current changes."
+    ]
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "name": "vishaal-skills",
+  "name": "vstack",
   "interface": {
-    "displayName": "Vishaal's Skills"
+    "displayName": "vstack"
   },
   "plugins": [
     {
-      "name": "vishaal",
+      "name": "vstack",
       "source": {
         "source": "local",
-        "path": "./plugins/vishaal"
+        "path": "./plugins/vstack"
       },
       "policy": {
         "installation": "AVAILABLE",
