@@ -1,8 +1,6 @@
 # vstack
 
-Vishaal's engineering stack for Claude Code and Codex: 32 skills combining
-personal workflows with selected, adapted [pstack](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack)
-and [tstack](https://github.com/t3dotgg/tstack) guidance.
+vishaal's engineering stack
 
 The aim is one clear workflow per job, direct proof before shipping, and short,
 useful handoffs. This is the consolidated home of
