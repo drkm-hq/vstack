@@ -24,16 +24,6 @@ codex plugin marketplace add drkm-hq/vstack
 codex plugin add vstack@vstack
 ```
 
-Restart Claude Code or start a new Codex task after installation. Remove or
-disable the old `vishaal@vishaal-skills` plugin when switching to avoid duplicate
-skill discovery. If you maintain copies in personal skill directories, compare
-and migrate those intentionally; plugin installation does not reconcile them.
-
-For hosts without plugin support, clone this repository and copy selected
-folders from `plugins/vstack/skills/` into the host's documented skills
-directory. Keep sibling skills that a workflow links to; installing the whole
-plugin supplies those dependencies.
-
 ## Skills
 
 ### Understand and design
