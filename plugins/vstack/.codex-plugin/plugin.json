@@ -1,6 +1,6 @@
 {
   "name": "vstack",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Vishaal's engineering stack: personal workflows with adapted pstack and tstack skills.",
   "author": {
     "name": "Vishaal Yalamanchali",
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "vstack",
     "shortDescription": "Portable engineering workflows and review tools.",
-    "longDescription": "Forty focused skills for design, investigation, implementation, verification, independent review, and shipping.",
+    "longDescription": "Thirty-two focused skills for design, investigation, implementation, verification, independent review, and shipping.",
     "developerName": "Vishaal Yalamanchali",
     "category": "Productivity",
     "capabilities": [

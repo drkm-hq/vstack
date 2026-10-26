@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REVIEW = ROOT / "plugins/vstack/skills/adversarial-review/scripts/run_adversarial_review.sh"
+REVIEW = ROOT / "plugins/vstack/skills/review-loop/scripts/run_adversarial_review.sh"
 LOG = ROOT / "plugins/vstack/skills/show-me-your-work/scripts/log.sh"
 
 

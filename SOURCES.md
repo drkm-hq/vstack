@@ -13,18 +13,18 @@ CLI plugins are not distributed here.
 
 Source: [cursor/plugins/pstack](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack),
 revision `640ea3abfbdef74aad432b58d8586e4bf645f42d`.
-The 18 standalone adaptations retain per-skill MIT notices for Lauren Tan and
+The pstack adaptations retain per-skill MIT notices for Lauren Tan and
 their original source links. Related guidance is consolidated into existing
 personal skills with `PSTACK-LICENSE.txt`:
 
 | Upstream material | vstack home |
 | --- | --- |
 | `how` | `trace-request-flow` |
-| `interrogate` | `adversarial-review` review lenses |
+| `interrogate` | `review-loop` review lenses |
 | `no-comments` | `deslop` comment review |
 | `tdd` and behavior-testing principles | `tdd` regression evidence |
 | proof and artifact principles | `meaningful-contribution` |
-| babysit and shipping playbooks | `check-ci`, `create-pr`, `babysit`, `yeet` |
+| babysit and shipping playbooks | `create-pr`, `babysit`, `yeet` |
 | performance and forensics playbooks | `debug-performance`, `figure-it-out` |
 | refactoring playbook | `refactor` |
 | design and type principles | `architect`, `typescript-best-practices` |
@@ -45,11 +45,11 @@ Adapted skills retain Theo Browne's MIT notice in `TSTACK-LICENSE.txt`.
 | `babysit-pr` | `babysit`: one watcher, rate limits, scoped fixes, current-head gates |
 | `full-send` | `full-send`, calling the consolidated shipping skills |
 | `full-stop` | `full-stop`, with an explicit no-merge endpoint |
-| `council` | `council`, bounded rounds and honest provider availability |
+| `council` | `review-loop` council reference, bounded rounds and honest provider availability |
 | `sol-loop` | `review-loop`, model-agnostic bounded review with evidence-based severity |
 | `takeover` | `takeover`, preserving authorship and the requested endpoint |
 | `modernize` | `modernize`, delegating mechanical conflicts to `resolve-conflicts` |
-| `leaving-pr-comments` | `leaving-pr-comments`, formatting already-authorized communication |
+| `leaving-pr-comments` | Shared comment guidance in `create-pr/references/pr-comments.md` |
 
 The upstream `pr-wait` script is not bundled: it encodes specific review bots
 and platform assumptions. vstack uses host-native monitoring or GitHub CLI
@@ -62,12 +62,37 @@ inherits babysit's merge-queue permission.
 
 The locally installed `codebase-design` derives from
 [Matt Pocock's skills](https://github.com/mattpocock/skills/tree/main/skills/engineering/codebase-design);
-its MIT notice is included. Its local snapshot is retained rather than
-claiming it matches today's upstream revision.
+its useful design guidance now lives in `architect/references/deep-modules.md`,
+with the MIT notice retained as `architect/MATT-POCOCK-LICENSE.txt`. The design
+comparison workflow routes to `arena` instead of duplicating delegation rules.
+The material is adapted from the local snapshot, not represented as an exact
+copy of today's upstream revision.
 
 Original notices in `cli-creator` and `yeet` remain intact. Follow each
 skill's included license and attribution; this collection does not replace
 upstream notices with a blanket relicensing claim.
+
+## Retired entry points
+
+The collection now exposes 32 skills. These eight entry points were removed;
+use the owning skill or reference instead. No alias skills remain to compete
+for discovery.
+
+| Previous entry point | Current home |
+| --- | --- |
+| `adversarial-review` | [review-loop](plugins/vstack/skills/review-loop/SKILL.md), including its isolated clone helper |
+| `council` | [review-loop council mode](plugins/vstack/skills/review-loop/references/council.md) |
+| `codebase-design` | [architect deep-module guidance](plugins/vstack/skills/architect/references/deep-modules.md) |
+| `teach` | [trace-request-flow](plugins/vstack/skills/trace-request-flow/SKILL.md) and its subsystem explanation guidance |
+| `zero-tech-debt` | [refactor](plugins/vstack/skills/refactor/SKILL.md), including cleanup of an accreted patch |
+| `check-ci` | [babysit CI status mode](plugins/vstack/skills/babysit/references/ci-status.md), read-only by default |
+| `maintain-verification-skill` | [create-verification-skill maintenance](plugins/vstack/skills/create-verification-skill/references/maintenance.md) |
+| `leaving-pr-comments` | [shared PR comment guidance](plugins/vstack/skills/create-pr/references/pr-comments.md) |
+
+The isolated-review helper and its environment options remain available under
+`review-loop/scripts/`; helper tests and CI use that location. Comment-formatting
+guidance never grants permission to post, and a CI status request never grants
+permission to repair, queue, or merge.
 
 ## Maintenance
 

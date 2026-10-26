@@ -1,11 +1,13 @@
 ---
 name: trace-request-flow
-description: Explain subsystem ownership and architecture or trace a concrete request through frontend, API, authentication, services, storage, background jobs, sandboxes, and external systems. Use when a user asks how a request works end to end, wants a Mermaid sequence diagram, needs exact mock payloads, wants to understand identity or credential propagation, or is interrogating a route, workflow, PR, job, webhook, cron, or async execution path.
+description: Explain a code change or subsystem at the reader's level, or trace a request through its callers, state, and integrations. Use for teaching, architecture walkthroughs, end-to-end flows, exact payloads, identity propagation, and async lifecycle questions.
 ---
 
 # Trace Request Flow
 
-Build an evidence-backed explanation of one request from caller to final result. Read code and tests; do not infer behavior from filenames or architecture descriptions alone.
+Start with what the code does and the problem it solves, at the depth the
+question needs. For a concrete request, build an evidence-backed explanation
+from caller to final result. Read code and tests; do not infer behavior from filenames or architecture descriptions alone.
 
 For a subsystem overview, placement, or ownership question, use [subsystem explanations](references/subsystem-explanations.md) instead of forcing a request payload and sequence diagram. For a concrete runtime request, follow the workflow below.
 

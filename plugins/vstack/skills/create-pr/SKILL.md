@@ -45,7 +45,7 @@ draft state, and body. Inspect title, body, quotes, and attachments for private
 material before publishing. Follow repository attribution rules; when adding
 model credit, use only a model identity exposed by the harness. Do not guess.
 For an authorized follow-up comment, use
-[leaving-pr-comments](../leaving-pr-comments/SKILL.md); creating a PR alone
+[PR comment guidance](references/pr-comments.md); creating a PR alone
 does not require a comment. Attach the created or updated PR to the current
 chat when the host provides that capability.
 

@@ -1,6 +1,6 @@
 # vstack
 
-Vishaal's engineering stack for Claude Code and Codex: 40 skills combining
+Vishaal's engineering stack for Claude Code and Codex: 32 skills combining
 personal workflows with selected, adapted [pstack](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack)
 and [tstack](https://github.com/t3dotgg/tstack) guidance.
 
@@ -39,13 +39,17 @@ plugin supplies those dependencies.
 ## Picking a workflow
 
 - `create-pr` replaces tstack's `file-pr`; `babysit` replaces `babysit-pr`.
-- `check-ci` is a status/diagnosis task. `babysit` continues through the
-  requested endpoint; monitor-only and do-not-merge instructions take priority.
+- `babysit` covers a one-time CI check, monitoring, or repairs through the
+  requested endpoint. Status checks are read-only; do-not-merge takes priority.
 - `full-send` explicitly carries a scoped change to merge. `full-stop` prepares
   it for your merge and never queues it. An ordinary request to stop means stop.
-- `adversarial-review` uses a temporary clone and Claude CLI. `review-loop` uses
-  your requested or configured independent reviewer. `council` requires three actual providers.
+- `review-loop` handles independent review, an isolated Claude CLI review,
+  or a requested council with three actual providers.
 - `arena` compares candidates for the same problem; `swarm` divides the work.
+
+Eight overlapping entry points have been folded into their owning workflows.
+See the [old-to-current mapping](SOURCES.md#retired-entry-points) when migrating
+personal instructions. Remove retired local copies to avoid duplicate discovery.
 
 ## Skills
 
@@ -54,11 +58,9 @@ plugin supplies those dependencies.
 | Skill | Purpose |
 | --- | --- |
 | `recall` | Rebuild context from prior work and the current repository. |
-| `trace-request-flow` | Trace behavior through callers, services, storage, and integrations. |
+| `trace-request-flow` | Explain code and subsystems, or trace a concrete request end to end. |
 | `why` | Recover design rationale from history and evidence. |
-| `teach` | Explain a change or subsystem at the reader's level. |
-| `architect` | Design real caller usage, ownership, types, and module boundaries. |
-| `codebase-design` | Use deep modules and testable interfaces. |
+| `architect` | Design caller usage, ownership, deep modules, and testable interfaces. |
 | `grill-me` | Pressure-test a proposal with pointed questions. |
 | `blast-radius` | Find consequences beyond the changed lines. |
 
@@ -68,34 +70,28 @@ plugin supplies those dependencies.
 | --- | --- |
 | `figure-it-out` | Build an evidenced workflow for an unfamiliar problem. |
 | `debug-performance` | Diagnose defects, leaks, and slow paths with measurements. |
-| `refactor` | Restructure code while preserving observable behavior. |
-| `zero-tech-debt` | Remove unused compatibility paths and accumulated scaffolding. |
+| `refactor` | Preserve behavior while restructuring code or removing unused compatibility paths. |
 | `typescript-best-practices` | Model truthful types and validate external boundaries. |
 | `tdd` | Develop behavior with red, green, and refactor cycles. |
 | `meaningful-contribution` | Require observed evidence before declaring code ready. |
 | `deslop` | Remove unnecessary generated code and comments. |
 | `cli-creator` | Build composable, durable command-line tools. |
-| `create-verification-skill` | Create a reusable real-app verification recipe. |
-| `maintain-verification-skill` | Repair a verification recipe against current behavior. |
+| `create-verification-skill` | Create, audit, and repair reusable real-app verification recipes. |
 
 ### Review and ship
 
 | Skill | Purpose |
 | --- | --- |
-| `adversarial-review` | Review committed changes in a temporary clone with Claude CLI. |
-| `review-loop` | Run a bounded review loop with your chosen independent reviewer. |
-| `council` | Compare independent reviews from three model providers. |
+| `review-loop` | Run independent, isolated, or council reviews with a bounded loop. |
 | `grab` | Read a PR's metadata, diff, and complete changed files. |
-| `check-ci` | Inspect current CI status and diagnose failures. |
 | `resolve-conflicts` | Resolve merge or rebase conflicts while preserving intent. |
 | `modernize` | Reassess an aging PR before rebasing or reworking it. |
 | `takeover` | Continue existing work while preserving contributor credit. |
 | `create-pr` | Create or update a concise PR or dependency-ordered stack. |
 | `yeet` | Format, verify, sign off, commit, and push the requested changes. |
-| `babysit` | Handle CI and reviews through the requested queue or merge endpoint. |
+| `babysit` | Check CI, diagnose failures, or shepherd a PR to the requested endpoint. |
 | `full-send` | Finish an explicitly requested change through verified merge. |
 | `full-stop` | Prepare a PR for the user to merge, leaving it open. |
-| `leaving-pr-comments` | Format authorized PR comments with verified attribution. |
 
 ### Coordinate and improve
 

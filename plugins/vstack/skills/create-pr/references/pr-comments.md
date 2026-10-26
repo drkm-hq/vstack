@@ -1,7 +1,3 @@
----
-name: leaving-pr-comments
-description: Format authorized agent-authored PR comments and review replies with verified attribution and concrete evidence. This formatting skill does not authorize posting.
----
 
 # Leaving PR Comments
 

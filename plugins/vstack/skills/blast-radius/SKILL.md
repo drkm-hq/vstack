@@ -18,4 +18,4 @@ Find the assumptions a change depends on and test the consequential ones. Assess
 
 Label evidence accurately: source citation, reasoned failure-path analysis, executable probe, or observed application behavior. Static reasoning does not become runtime proof because it is convincing.
 
-Report what changes, what it is safe because of, proof or the precise gap, confirmed risks, and the cheapest useful remaining check. Route broader independent review to the installed `adversarial-review` skill when requested.
+Report what changes, what it is safe because of, proof or the precise gap, confirmed risks, and the cheapest useful remaining check. Route broader independent review to [review-loop](../review-loop/SKILL.md) when requested.

@@ -1,11 +1,23 @@
 ---
 name: babysit
-description: Babysit a pull request through green CI, addressed and resolved review comments, and submission to its merge queue. Use when asked to babysit or shepherd a PR through shipping; honor narrower requests to monitor only or stop before merging.
+description: Check CI status, diagnose failures, or shepherd a PR through requested repairs, reviews, and shipping. Use for CI checks, PR monitoring, or babysitting; a status request is read-only and never implies merge permission.
 ---
 
 # Babysit
 
-Carry the target PR through CI and review fixes, push verified changes, resolve addressed review threads, and add it to the repository's merge queue. Follow the queue through merge and, when production delivery is requested, observe the normal deployment pipeline. Keep updates terse and evidence-based.
+Select the endpoint from the user's request before taking action:
+
+- **Status or diagnosis:** follow [CI status](references/ci-status.md), report
+  the evidence, and stop. This mode is read-only and works without a PR.
+- **Watch only:** observe changes without edits, replies, retries, or merging.
+- **Repair or ready for review:** fix and verify within scope, preserving the
+  user's commit/push boundary; do not queue or merge.
+- **Babysit through shipping:** handle verified fixes and review feedback,
+  then use the repository's merge queue and follow it through merge. Observe
+  deployment only when production delivery is requested.
+
+The remaining sections support those endpoints; loading this skill does not
+upgrade a status or repair request into shipping. Keep updates terse.
 
 ## Establish the target and scope
 
@@ -37,7 +49,7 @@ Read findings against current source, including unresolved comments marked outda
 
 ## Address and resolve review comments
 
-Use [leaving-pr-comments](../leaving-pr-comments/SKILL.md) for authorized
+Use [PR comment guidance](../create-pr/references/pr-comments.md) for authorized
 replies. For each actionable comment, reply briefly with the fix commit and relevant verification, or a specific code-based explanation when no change is needed. Avoid duplicate replies on repeated monitoring passes.
 
 Resolve a review thread only after its concern is demonstrably addressed or disproven. Outdated status alone is insufficient. Ordinary PR comments and review summaries cannot be resolved like inline threads; address their concerns and track their disposition. Do not dismiss a blocking review or manufacture approval to clear the queue. If a reviewer or owner must act, identify the exact remaining action.

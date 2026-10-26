@@ -1,6 +1,6 @@
 ---
 name: review-loop
-description: Review a scoped change with one independent reviewer, verify findings, and iterate within a bounded budget. Use when the user requests an iterative review or a shipping workflow calls for it.
+description: Review a scoped change independently, verify findings, and iterate within a bounded budget. Use for iterative or adversarial review, isolated reviews, council reviews, or shipping workflows that request review.
 license: MIT
 ---
 
@@ -17,6 +17,20 @@ discovery and `delegate_task` only when available. A separate reviewer must
 inspect the raw change independently; the author's self-review is not a second
 reviewer. If no independent runner is available, report that limitation.
 
+## Choose the review mode
+
+Default to one independent reviewer. For a requested one-pass review, report
+findings without starting a fix loop. For a requested isolated CLI review,
+read [isolated review](references/isolated-review.md) and use the bundled
+[clone helper](scripts/run_adversarial_review.sh). It reviews committed state
+only; use a native reviewer for uncommitted changes instead of omitting them.
+For a council or cross-provider review, read [council](references/council.md).
+Load only the selected mode's details.
+
+Use [review lenses and triage](references/review-lenses.md) when an adversarial
+pass needs several risk lenses. A choice of mode does not expand publication
+or implementation scope.
+
 ## Scope and budget
 
 Inspect worktree status and establish the actual PR base or intended local
@@ -28,7 +42,8 @@ while review runs.
 Default to three rounds: a full first pass, then changed behavior and open
 findings only. Extend to five only when security, authorization, data loss, or
 concurrency findings justify it, or when the user asks. Stop early for nits.
-Use one reviewer at a time; that reviewer must not delegate further. A review
+Use one reviewer at a time by default; only the requested council mode runs
+a panel. Reviewers must not delegate further. A review
 request alone does not authorize implementation or publication.
 
 ## Reviewer brief

@@ -1,7 +1,3 @@
----
-name: adversarial-review
-description: Run an independent adversarial review of committed branch changes in a temporary clone using the Claude CLI. Use when asked for an isolated or adversarial review; use review-loop for a model-agnostic iterative review.
----
 
 # Adversarial Review
 
@@ -11,7 +7,7 @@ rather than silently omitting changes. For uncommitted work, use a native
 read-only reviewer with the complete diff or commit only when authorized.
 
 ```bash
-/path/to/adversarial-review/scripts/run_adversarial_review.sh --base origin/main
+/path/to/review-loop/scripts/run_adversarial_review.sh --base origin/main
 ```
 
 Resolve the actual PR or stack parent; do not assume every PR targets main.
@@ -21,7 +17,7 @@ Fetch the intended base beforehand when current remote state matters.
 The helper runs Claude in print mode with the CLI's configured model. Set
 `ADVERSARIAL_REVIEW_MODEL` or pass `--model` for an available model or personal
 alias such as `fable`. `CLAUDE_BIN` overrides the executable. Do not pass a
-Codex binary: its noninteractive interface differs. For an iterative review with a different runner, use [review-loop](../review-loop/SKILL.md).
+Codex binary: its noninteractive interface differs. For an iterative review with a different runner, use [review-loop](../SKILL.md).
 
 Flags:
 
@@ -39,4 +35,4 @@ it is not an operating-system sandbox or permission to bypass host controls.
 Require findings ordered by severity with file/line references, a reachable
 failure, consequence, and evidence. Treat review as advisory and verify claims
 against the actual code before fixing them. Read
-[review lenses and triage](references/review-lenses.md) for a broader review.
+[review lenses and triage](review-lenses.md) for a broader review.

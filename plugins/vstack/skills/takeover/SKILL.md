@@ -37,8 +37,8 @@ experience works. State what remains unverified.
 When the requested finish includes a PR, use [create-pr](../create-pr/SKILL.md) to file or update it,
 then use [babysit](../babysit/SKILL.md) only to the requested endpoint. A
 takeover or PR-creation request alone does not authorize queue submission
-or merging. Use `leaving-pr-comments`
-for replies. Merge or close the original PR only when authorized.
+or merging. Use [PR comment guidance](../create-pr/references/pr-comments.md)
+for authorized replies. Merge or close the original PR only when authorized.
 
 Report what you inherited, what you changed, how you verified it, how credit
 was preserved, and any remaining decision.

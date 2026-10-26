@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: "Restructure code while preserving observable behavior, migrating real callers, and checking equivalence. Use when the user requests a refactor, simplification, or internal API migration."
+description: "Restructure code while preserving observable behavior, migrating real callers, and checking equivalence. Use for refactoring, simplification, internal API migration, or removing unused compatibility code and accumulated patch scaffolding."
 license: MIT
 metadata:
   upstream: https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/poteto-mode/playbooks/refactoring.md
@@ -17,5 +17,15 @@ Name the behavior to preserve and the structural problem to remove. Keep a reque
 5. Use a codemod for repetitive edits when it reduces risk, verify a representative unit, and inspect the resulting diff. Do not create helpers, options, or new directories without a real consumer.
 6. Keep intentional behavior changes separate and visible. If the new shape repeatedly needs casts, conditional workarounds, or shared state that was absent from the design, use [architect](../architect/SKILL.md) to revisit it within scope.
 7. Run focused equivalence or behavior checks and the repository's required formatting, lint, and type checks. Inspect the final diff for missed consumers and unsupported compatibility claims.
+
+## Clean up an accreted patch
+
+For a zero-tech-debt or compatibility-cleanup request, state the intended end
+state before optimizing the current patch. Search real callers, external
+contracts, persisted data, deployment order, and mixed versions before deleting
+a flag, route alias, fallback, or wrapper. Remove unused paths instead of
+building a generic replacement, and centralize duplicated rules with their
+owner. Verify affected navigation, permissions, serialization, and lifecycle
+behavior. Preserve compatibility that still has a concrete consumer.
 
 Report what became simpler, which behavior was compared, observed results, and gaps. Preserve commit and publishing stop points.
