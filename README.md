@@ -34,21 +34,6 @@ folders from `plugins/vstack/skills/` into the host's documented skills
 directory. Keep sibling skills that a workflow links to; installing the whole
 plugin supplies those dependencies.
 
-## Picking a workflow
-
-- `create-pr` replaces tstack's `file-pr`; `babysit` replaces `babysit-pr`.
-- `babysit` covers a one-time CI check, monitoring, or repairs through the
-  requested endpoint. Status checks are read-only; do-not-merge takes priority.
-- `full-send` explicitly carries a scoped change to merge. `full-stop` prepares
-  it for your merge and never queues it. An ordinary request to stop means stop.
-- `review-loop` handles independent review, an isolated Claude CLI review,
-  or a requested council with three actual providers.
-- `arena` compares candidates for the same problem; `swarm` divides the work.
-
-Eight overlapping entry points have been folded into their owning workflows.
-See the [old-to-current mapping](SOURCES.md#retired-entry-points) when migrating
-personal instructions. Remove retired local copies to avoid duplicate discovery.
-
 ## Skills
 
 ### Understand and design
