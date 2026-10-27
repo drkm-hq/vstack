@@ -10,4 +10,4 @@ Deduplicate findings, inspect the real code, and test consequential claims when 
 
 Apply fixes only when requested or included in an existing authorized implementation task. Do not add unrelated changes to satisfy a reviewer. Posting review comments or resolving remote threads also requires that communication to be authorized.
 
-Adapted from pstack: [interrogate](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/interrogate). See `../PSTACK-LICENSE.txt`.
+Adapted from pstack: [interrogate](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/interrogate).

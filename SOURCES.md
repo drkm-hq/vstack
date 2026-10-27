@@ -13,9 +13,7 @@ CLI plugins are not distributed here.
 
 Source: [cursor/plugins/pstack](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack),
 revision `640ea3abfbdef74aad432b58d8586e4bf645f42d`.
-The pstack adaptations retain per-skill MIT notices for Lauren Tan and
-their original source links. Related guidance is consolidated into existing
-personal skills with `PSTACK-LICENSE.txt`:
+Related guidance is consolidated into existing personal skills:
 
 | Upstream material | vstack home |
 | --- | --- |
@@ -37,8 +35,6 @@ that consumes it instead of creating overlapping entry points.
 
 Source: [t3dotgg/tstack](https://github.com/t3dotgg/tstack/tree/7de017b3fc9d50c03cf3ecb98fb71e0ca65a78bd),
 revision `7de017b3fc9d50c03cf3ecb98fb71e0ca65a78bd`.
-Adapted skills retain Theo Browne's MIT notice in `TSTACK-LICENSE.txt`.
-
 | Upstream skill | vstack home |
 | --- | --- |
 | `file-pr` | `create-pr`: concise problem-first descriptions, attribution, REST fallback |
@@ -68,9 +64,9 @@ comparison workflow routes to `arena` instead of duplicating delegation rules.
 The material is adapted from the local snapshot, not represented as an exact
 copy of today's upstream revision.
 
-Original notices in `cli-creator` and `yeet` remain intact. Follow each
-skill's included license and attribution; this collection does not replace
-upstream notices with a blanket relicensing claim.
+Original Apache notices in `cli-creator` and `yeet` remain intact, as does
+`architect/MATT-POCOCK-LICENSE.txt`. The collection itself is MIT; see the
+repository root `LICENSE`.
 
 ## Retired entry points
 
@@ -97,7 +93,7 @@ permission to repair, queue, or merge.
 ## Maintenance
 
 Keep one canonical workflow for each job. Update callers when renaming a
-skill. Record imported upstream revisions and retain notices beside adapted
-content. Run the validator and helper integration tests before publishing.
+skill. Record imported upstream revisions in this file. Run the validator and
+helper integration tests before publishing.
 Model selections belong in user or repository configuration; named models
 must be available, and missing reviewers are never reported as approval.

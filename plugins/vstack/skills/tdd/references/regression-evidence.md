@@ -8,4 +8,4 @@ Mock external boundaries when needed while keeping the subject and relevant inte
 
 Use a safe isolated revision for a red/green comparison when practical. Do not discard user edits to manufacture failure. If the meaningful test needs unavailable services or disproportionate new infrastructure, name the gap, run the strongest existing executable check, and avoid presenting it as full proof. An explicit TDD request still calls for the requested first failing test where feasible.
 
-Adapted from pstack: [tdd](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/tdd), [principle-test-behavior-not-implementation](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/principle-test-behavior-not-implementation). See `../PSTACK-LICENSE.txt`.
+Adapted from pstack: [tdd](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/tdd), [principle-test-behavior-not-implementation](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/principle-test-behavior-not-implementation).

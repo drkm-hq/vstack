@@ -15,4 +15,4 @@ Give the purpose, essential concepts, mechanism, a small file map, and consequen
 
 Reference actual files and symbols. Separate observed behavior from inferred rationale. Use the installed `why` skill when historical intent is the unresolved part, and say what remains untraced.
 
-Adapted from pstack: [how](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/how). See `../PSTACK-LICENSE.txt`.
+Adapted from pstack: [how](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/how).
