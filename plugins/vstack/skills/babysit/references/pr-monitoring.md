@@ -10,4 +10,4 @@ After a fix, rerun affected checks and evaluate the new head. Keep one owner for
 
 For requested ongoing monitoring, use available Codex automation tools and keep notifications quiet while state is unchanged or non-actionable. Notify on meaningful progress, completion, failure, or required action. Do not introduce a polling loop or background process for an ordinary status query.
 
-Adapted from pstack: [poteto-mode/playbooks/babysit.md](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/poteto-mode/playbooks/babysit.md), [poteto-mode/playbooks/shipping.md](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/poteto-mode/playbooks/shipping.md). See `../PSTACK-LICENSE.txt`.
+Adapted from pstack: [poteto-mode/playbooks/babysit.md](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/poteto-mode/playbooks/babysit.md), [poteto-mode/playbooks/shipping.md](https://github.com/cursor/plugins/tree/640ea3abfbdef74aad432b58d8586e4bf645f42d/pstack/skills/poteto-mode/playbooks/shipping.md).

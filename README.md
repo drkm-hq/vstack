@@ -5,8 +5,8 @@ vishaal's engineering stack
 The aim is one clear workflow per job, direct proof before shipping, and short,
 useful handoffs. This is the consolidated home of
 [vishytheswishy/skills](https://github.com/vishytheswishy/skills).
-See [sources and consolidation](SOURCES.md) for upstream revisions, licenses,
-and the mapping from old names.
+See [sources and consolidation](SOURCES.md) for upstream revisions and the
+mapping from old names.
 
 ## Install
 
