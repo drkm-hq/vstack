@@ -81,7 +81,10 @@ codex plugin add vstack@vstack
 ## Requirements
 
 GitHub workflows use an authenticated [GitHub CLI](https://cli.github.com)
-or equivalent host tools. Independent review requires the requested model to
+or equivalent host tools. Graphite stacks use the authenticated `gt` CLI for
+branch relationships, restacking, and PR submission, and Graphite's configured
+merge queue for shipping. See the shared [Graphite workflow](plugins/vstack/skills/yeet/references/graphite.md).
+Independent review requires the requested model to
 be available through the host or a configured CLI. Model aliases are not
 portable; configure personal choices in `AGENTS.md`, `CLAUDE.md`, or the
 review runner's environment.

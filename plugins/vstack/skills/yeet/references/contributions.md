@@ -19,13 +19,19 @@ and the repository's contribution rules.
 
 ## Stack changes
 
+Read [Graphite workflow](graphite.md) for stacks and Graphite repositories.
+Use `gt` for stack creation, tracking, restacking, and submission by default;
+choose the configured Graphite merge queue when the endpoint includes merging.
+Do not wait for the user to repeat this tool choice.
+
 - Prefer a linear Graphite stack in dependency order when preparing a stack.
   Explain necessary side branches and which changes are absent from each tip.
 - Put review fixes in their owning PR and restack descendants. Avoid a catch-all
   fix PR that obscures ownership.
 - Preserve concurrent work when restacking. Before an authorized rewrite of
   published history, retain backup refs and record the expected remote tips;
-  protect updates with explicit force-with-lease expectations. This guidance
+  protect Graphite submissions with their default lease protection, or Git
+  pushes with explicit force-with-lease expectations. This guidance
   does not itself authorize rewriting published history.
 - Before consolidating existing PRs, establish the mapping from old PRs to new
   ones. Preserve review history and link superseded PRs to replacements. Earlier

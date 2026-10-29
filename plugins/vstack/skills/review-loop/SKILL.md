@@ -34,7 +34,10 @@ or implementation scope.
 ## Scope and budget
 
 Inspect worktree status and establish the actual PR base or intended local
-base. Record the head and include relevant staged, unstaged, and untracked
+base. For Graphite stacks, inspect `gt log`, `gt parent`, and live PR bases;
+review each layer against its actual parent, with dependency context. Read
+[Graphite workflow](../yeet/references/graphite.md) before authorized restacking
+or submission. Record the head and include relevant staged, unstaged, and untracked
 changes. Preserve unrelated edits. Give the reviewer the goal, scope, base,
 exact diff or revision, and observed check results. Do not edit scoped files
 while review runs.
@@ -77,6 +80,8 @@ that it stopped before restarting; do not run duplicate reviewers.
 Finish when the current behavior is approved and material findings are
 resolved. A finding disputed after two replies or an exhausted round budget
 is a blocker to agreement, not permission to ship. Report both positions and
-the remaining decision. Push only when publishing is part of the user's task.
+the remaining decision. Publish only when it is part of the user's task; use
+`gt submit` for Graphite updates. Restacked descendants need checks and review proportionate to their
+changed behavior; old approval does not automatically cover the new heads.
 If updating a PR, record actual rounds, model, and verdict in its description.
 Report fixed and declined findings, checks, and any unverified behavior.
