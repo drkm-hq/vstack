@@ -14,7 +14,9 @@ operations, unrelated changes, and branch-protection bypasses remain outside
 this workflow.
 
 1. Establish the goal, intended base, current head, worktree ownership, and
-   repository conventions. Create a task branch if on the default branch.
+   repository conventions. Read [Graphite workflow](../yeet/references/graphite.md)
+   for stacks or Graphite repositories; use `gt` for their branch lifecycle and
+   submission. Create a task branch if on the default branch.
 2. Finish the scoped change. Use [meaningful-contribution](../meaningful-contribution/SKILL.md)
    for direct evidence: reproduce a fixed failure, exercise affected behavior,
    and run appropriate checks. Report unavailable evidence.
@@ -25,7 +27,9 @@ this workflow.
    update the PR. Describe the problem, resulting behavior, and observed proof.
 5. Use [babysit](../babysit/SKILL.md) for CI, review replies, and verified fixes.
    This workflow's explicit merge request permits the repository's normal
-   direct merge if it has no queue; otherwise use its queue. Follow through to
+   direct merge if it has no queue; otherwise use its queue. For Graphite, use
+   the configured Graphite merge queue action, with `gt merge --dry-run` to establish any CLI merge scope;
+   never substitute `gh pr merge` for Graphite enqueue. Follow through to
    confirmed merge. Changes after review need appropriately scoped rechecking.
 
 ## Merge gate
@@ -42,8 +46,9 @@ tool supports it. Never use an administrative bypass. Queue entry or
 auto-merge is not proof of merge; read back the merged commit.
 
 Preserve concurrent branch work. If a published rebase is necessary and
-authorized, save the old head and use an explicit force-with-lease expectation
-for this task's branch only. A lease rejection requires reassessment.
+authorized, save the old head and record the expected remote tips. Use
+Graphite's default submit lease protection for the authorized stack, or an explicit Git force-with-lease
+expectation for this task's branch only. A lease rejection requires reassessment.
 
 ## Completion and blockers
 

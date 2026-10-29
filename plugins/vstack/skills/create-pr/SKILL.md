@@ -1,6 +1,6 @@
 ---
 name: create-pr
-description: Create or update a GitHub pull request or prepare a dependency-ordered PR stack from the current work. Use when the user asks to open, submit, update, or organize PRs for shipping.
+description: Create or update a GitHub pull request or prepare a dependency-ordered PR stack from the current work. Use when the user asks to open, submit, update, or organize PRs for shipping, including Graphite stacks managed with gt.
 ---
 
 # Create PR
@@ -16,8 +16,9 @@ existing PR for the branch instead of creating a duplicate.
 
 For a standalone PR, use the intended integration branch. For a stack, base
 each PR on its actual parent and describe only that contribution's changes.
-Use the existing Graphite relationships when available. Do not target every
-stack entry at the default branch or consolidate a stack without an agreed
+Use `gt` and the existing Graphite relationships by default for stacks; read
+[Graphite workflow](../yeet/references/graphite.md) for command scope and
+submission. Do not target every stack entry at the default branch or consolidate a stack without an agreed
 mapping. Apply the shared guidance before restructuring changes.
 
 ## Prepare the contribution
@@ -39,7 +40,9 @@ Explain the final behavior, consequential choices, and actual verification.
 For a stack, identify dependencies and the scope available at this branch's
 tip. Scale the description to the change and follow the repository template.
 
-Use the available GitHub tools or `gh` to create or update the PR. When GraphQL
+For Graphite stacks, create and update PRs with `gt submit`; use GitHub tools
+or `gh` for metadata and inspection. For other repositories, use the available
+GitHub tools or `gh` to create or update the PR. When GraphQL
 is rate-limited, the REST API is an alternative; preserve the exact head, base,
 draft state, and body. Inspect title, body, quotes, and attachments for private
 material before publishing. Follow repository attribution rules; when adding

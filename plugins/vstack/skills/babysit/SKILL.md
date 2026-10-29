@@ -1,6 +1,6 @@
 ---
 name: babysit
-description: Check CI status, diagnose failures, or shepherd a PR through requested repairs, reviews, and shipping. Use for CI checks, PR monitoring, or babysitting; a status request is read-only and never implies merge permission.
+description: Check CI status, diagnose failures, or shepherd a PR through requested repairs, reviews, and shipping. Use for CI checks, PR monitoring, or babysitting; a status request is read-only and never implies merge permission. Use Graphite's merge queue when configured.
 ---
 
 # Babysit
@@ -43,7 +43,10 @@ Read findings against current source, including unresolved comments marked outda
 
 - Diagnose failing checks from logs and relevant code before editing. A failure outside the diff can still be caused by the PR. Use reproduction and run evidence to distinguish defects from infrastructure problems.
 - Make scoped fixes consistent with the codebase. Exercise the affected behavior and run relevant formatting, lint, type, unit, and integration checks. Add regression coverage when it meaningfully protects the corrected behavior. Follow repository-specific skills and verification commands where available.
-- Read the final diff, commit using repository conventions, and push to the actual PR head. Do not force-push or rewrite unrelated stack history as a routine repair.
+- Read the final diff, commit using repository conventions, and publish to the
+  actual PR head. For Graphite, use [Graphite workflow](../yeet/references/graphite.md):
+  fix the owning branch, restack affected descendants, and `gt submit` the
+  authorized scope. Do not rewrite unrelated stack history as a routine repair.
 - After pushing, record the new SHA and evaluate checks and reviews for that revision. Old green checks do not validate a new head. If another contributor changes the branch, refresh before proceeding.
 - Rerun a failed job only when evidence supports a transient cause. Bound reruns, normally at most two for the same failure; repeated failures require diagnosis or a concrete blocker report. Never repeatedly rerun tests merely to obtain a green result.
 
@@ -58,7 +61,15 @@ Resolve a review thread only after its concern is demonstrably addressed or disp
 
 Immediately before queue submission, refresh the head SHA, required checks, unresolved threads, approvals, mergeability, and stack dependencies. Proceed only when the current revision is green, review concerns are accounted for, and required approvals and prerequisites are satisfied. Mark a draft ready only when this shipping request authorizes it and those readiness conditions hold.
 
-Determine the configured queue from repository instructions, rules, and existing integration evidence. Use its supported enqueue action. For a GitHub native merge queue, after confirming that the target branch requires that queue:
+Determine the configured queue from repository instructions, rules, and existing
+integration evidence. For Graphite, read [Graphite workflow](../yeet/references/graphite.md)
+and use its configured enqueue action. Check the exact downstack scope before
+`gt merge` or applying a queue label; every included PR must be authorized and
+ready. Missing `gt` authentication blocks operations that require it, such as
+submission; an already-published, verified stack can still enter Graphite's
+configured queue through an authenticated label/API interface. If no supported
+queue action is accessible, report the blocker rather than switching providers. For a GitHub native merge queue, after
+confirming that the target branch requires that queue:
 
 ```bash
 gh pr merge <PR> --repo <OWNER/REPO> --match-head-commit <VERIFIED_SHA>

@@ -47,9 +47,11 @@ pre-rebase revisions to catch accidental omissions.
 
 Finish with the owning tool: `gt continue`, `git rebase --continue`, or the
 appropriate merge commit. Do not bypass hooks or validation. Push only when
-publication is requested. For an authorized published-history rewrite, retain
-the observed remote head and use an explicit force-with-lease expectation;
-if it fails, fetch and reassess concurrent work.
+publication is requested. For Graphite, follow [Graphite workflow](../yeet/references/graphite.md)
+and use `gt submit` with its default lease protection after rechecking affected
+branches. For other authorized published-history rewrites, retain the observed
+remote head and use an explicit force-with-lease expectation; if a lease fails,
+fetch and reassess concurrent work.
 
 Report the preserved behaviors, consequential decisions, checks and gaps,
 completed operation, and publication state.

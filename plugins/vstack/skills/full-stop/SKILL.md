@@ -17,7 +17,10 @@ branch, or delegate those actions. These restrictions also apply when calling
 
 Before pushing, inspect existing auto-merge and queue state. Prevent automatic
 merging of this task's PR using the repository's supported cancellation action
-and report the change. If that cannot be done, stop before the push and explain
+and report the change. For Graphite, include its merge-when-ready setting and
+queue label/job; follow [Graphite workflow](../yeet/references/graphite.md) for
+cancellation scope, and never submit with `--merge-when-ready`.
+If that cannot be done, stop before the push and explain
 the blocker. Recheck before handoff.
 
 Use full-send's merge gate as the readiness gate. Verify the live head, base,

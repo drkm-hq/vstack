@@ -25,7 +25,13 @@ not require opening a PR.
 7. Stage only the files relevant to the user's requested change. Never sweep unrelated edits into the commit.
 8. Write an imperative commit message that reflects the change, not the mechanics.
 9. Commit with Vishaal sign-off using `git commit --signoff -m "<message>"`.
-10. Push the current branch with `git push`. If the push is rejected because the remote branch moved, integrate the remote changes safely first, such as with `git pull --rebase`, then push again. Do not force-push unless the user explicitly asks for it.
+10. In Graphite repositories, follow [Graphite workflow](references/graphite.md):
+    restack affected descendants and publish with `gt submit`, preserving the
+    user's PR-creation boundary (`--update-only` when only updating existing
+    PRs). For a push-only branch without a PR, use a normal `git push` rather
+    than opening a PR. Outside Graphite, push with `git push`. A rejection
+    requires inspecting remote changes before integrating and retrying; do not
+    blindly pull/rebase a tracked stack or force away concurrent work.
 
 ## Command Policy
 
